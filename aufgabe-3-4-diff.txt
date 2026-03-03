@@ -1,0 +1,2 @@
+In Aufgabe 3 waren alle Dateien untracked (??).
+Im Aufgabe 4 sind foo.txt und bar.txt staged (A), qux.txt bleibt untracked.
