@@ -1,0 +1,21 @@
+1.	Beim Löschen mit rm wird die Datei nur im Arbeitsverzeichnis gelöscht.
+	git status zeigt die Datei als deleted, aber die Änderung ist noch nicht gestaged.
+
+	Beim Löschen mit git rm wird die Datei sowohl im Arbeitsverzeichnis gelöscht als auch automatisch gestaged.
+	git status zeigt die Datei deshalb direkt als deleted (staged) an.
+
+2.	Wenn eine Datei mit rm gelöscht wurde:
+	git checkout -- foo.txt
+
+	Wenn eine Datei mit git rm gelöscht wurde:
+	git reset HEAD bar.txt
+	git checkout -- bar.txt
+
+3.	Beim Umbenennen mit mv wird die Datei nur im Dateisystem umbenannt.
+	Git erkennt dies als Löschen der alten Datei und neue untracked Datei.
+
+	Beim Umbenennen mit git mv wird die Datei umbenannt und gleichzeitig
+	im Staging-Bereich aktualisiert. Git erkennt die Änderung direkt als rename.
+
+	git mv ist vorzuziehen, weil weniger Befehle nötig sind und Git die
+	Umbenennung automatisch korrekt verfolgt.
