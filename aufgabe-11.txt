@@ -1,0 +1,40 @@
+Anwendungsfall 1:
+Ich möchte nur die letzten 3 Commits sehen.
+
+Befehl:
+git log -3
+
+Parameter:
+-3 → zeigt nur die letzten 3 Commits
+
+
+Anwendungsfall 2:
+Ich möchte eine kurze Übersicht aller Commits in einer Zeile sehen.
+
+Befehl:
+git log --pretty=oneline
+
+Parameter:
+--pretty=oneline → zeigt jeden Commit in einer Zeile
+
+
+Anwendungsfall 3:
+Ich möchte sehen, welche Dateien in den Commits geändert wurden.
+
+Befehl:
+git log --name-only
+
+Parameter:
+--name-only → zeigt nur die Namen der geänderten Dateien
+
+
+Anwendungsfall 4:
+Ich möchte eine kompakte Übersicht mit Graph und nur wenige Commits sehen.
+
+Befehl:
+git log --graph --pretty=oneline -5
+
+Parameter:
+--graph → zeigt Branch-Graph
+--pretty=oneline → kurze Ausgabe
+-5 → nur die letzten 5 Commits
